@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name placa_desenvolvimento-rescue)(type Legacy)(uri ${KIPRJMOD}/placa_desenvolvimento-rescue.lib)(options "")(descr ""))
+  (lib (name New_Library)(type Legacy)(uri C:/Google_Drive/maker/placa_desenvolvimento/lib/New_Library.lib)(options "")(descr ""))
+)
