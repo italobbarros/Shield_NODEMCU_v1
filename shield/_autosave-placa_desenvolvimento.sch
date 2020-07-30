@@ -356,12 +356,12 @@ $EndComp
 Wire Wire Line
 	6550 1050 6300 1050
 $Comp
-L Connector:Conn_01x05_Male J3
+L Connector:Conn_01x04_Male J3
 U 1 1 5F21B407
 P 3100 7150
 F 0 "J3" V 3050 7150 50  0000 R CNN
 F 1 "saidas digitais" V 2950 7450 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 3100 7150 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 3100 7150 50  0001 C CNN
 F 3 "~" H 3100 7150 50  0001 C CNN
 	1    3100 7150
 	0    -1   -1   0   
@@ -446,7 +446,7 @@ Text GLabel 4950 6950 1    50   Input ~ 0
 CLK
 Text GLabel 4300 4450 0    50   Input ~ 0
 CLK
-Text GLabel 5050 6950 1    50   Input ~ 0
+Text GLabel 5150 6950 1    50   Input ~ 0
 CMD
 Text GLabel 4300 4550 0    50   Input ~ 0
 CMD
@@ -458,7 +458,7 @@ Text GLabel 4300 4850 0    50   Input ~ 0
 SD2
 Text GLabel 4300 4950 0    50   Input ~ 0
 SD3
-Text GLabel 5150 6950 1    50   Input ~ 0
+Text GLabel 5050 6950 1    50   Input ~ 0
 SD0
 Text GLabel 5250 6950 1    50   Input ~ 0
 SD1
@@ -679,14 +679,12 @@ $EndComp
 Wire Wire Line
 	10150 4350 10150 4500
 Text GLabel 3300 6950 1    50   Input ~ 0
-SD4_5V
+SD_5V
 Text GLabel 3200 6950 1    50   Input ~ 0
-SD3_5V
+D7
 Text GLabel 3100 6950 1    50   Input ~ 0
-D6
+D4
 Text GLabel 3000 6950 1    50   Input ~ 0
-D5
-Text GLabel 2900 6950 1    50   Input ~ 0
 D0
 $Comp
 L power:+3.3V #PWR0128
@@ -957,21 +955,21 @@ F 3 "" H 2450 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 5F24D7CA
 P 6750 5050
-F 0 "R?" V 6543 5050 50  0000 C CNN
-F 1 "10k" V 6634 5050 50  0000 C CNN
+F 0 "R4" V 6543 5050 50  0000 C CNN
+F 1 "150" V 6634 5050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6680 5050 50  0001 C CNN
 F 3 "~" H 6750 5050 50  0001 C CNN
 	1    6750 5050
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR08
 U 1 1 5F24EAF7
 P 6850 5400
-F 0 "#PWR?" H 6850 5150 50  0001 C CNN
+F 0 "#PWR08" H 6850 5150 50  0001 C CNN
 F 1 "GND" H 6855 5227 50  0000 C CNN
 F 2 "" H 6850 5400 50  0001 C CNN
 F 3 "" H 6850 5400 50  0001 C CNN
@@ -985,12 +983,12 @@ Wire Wire Line
 Wire Wire Line
 	6950 5050 6900 5050
 Text GLabel 6600 5050 0    50   Input ~ 0
-D7
+D5
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR09
 U 1 1 5F2524EB
 P 8000 4650
-F 0 "#PWR?" H 8000 4500 50  0001 C CNN
+F 0 "#PWR09" H 8000 4500 50  0001 C CNN
 F 1 "+12V" H 8015 4823 50  0000 C CNN
 F 2 "" H 8000 4650 50  0001 C CNN
 F 3 "" H 8000 4650 50  0001 C CNN
