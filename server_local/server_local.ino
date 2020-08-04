@@ -8,8 +8,8 @@ int watchdogCount = 0;
 
 Ticker secondTick;
 
-char ssid[]  = "italo";
-char senha[] = "54421141";
+char ssid[]  = "";
+char senha[] = "";
 
 IPAddress ip(192,168,0,106); //COLOQUE UMA FAIXA DE IP DISPONÍVEL DO SEU ROTEADOR. EX: 192.168.1.110 **** ISSO VARIA, NO MEU CASO É: 192.168.0.175
 IPAddress gateway(192,168,0,1); //GATEWAY DE CONEXÃO (ALTERE PARA O GATEWAY DO SEU ROTEADOR)
@@ -200,61 +200,61 @@ if(!Status8){
   client.println("<!DOCTYPE HTML>"); //INFORMA AO NAVEGADOR A ESPECIFICAÇÃO DO HTML
   client.println("<html>"); //ABRE A TAG "html"
   client.println("<meta http-equiv='refresh' content='2'>");
-  client.println("<h1><center>Rede local com o ESP8266<center></h1>");
+  client.println("<h1><center>Rede local com o ESP8266</center></h1>");
   //client.println("<h2>rede local utilizada para automacao residencial</h2>");
 
   client.println("<br></br>");//pula linha
-
+  client.println("<style>html, body {font-family: sans-serif;}body {max-width: 40em;background-color:#fff;}main {font-size: 50px;}button {font: inherit;cursor: pointer;font-size: 5em;text-align: center;}.botao_on {display: inline-block;text-decoration: none;background: #06F;text-align: center;color:#FFF;font-size: 5em;width:940px;height:200px;border:0;text-shadow: 10px 10px 10px rgba(0,0,0,0.5);border-radius:4em;box-shadow: -10px -10px 0 -5px  #00F,inset 10px 10px 0 10px #00F;transform: translate(5px, 5px);}.botao_off {display: inline-block;text-decoration: none;text-align: center;background: #c00;color:#FFF;font-size: 5em;width:940px;height:200px;border:0;text-shadow: 10px 10px 10px rgba(0,0,0,0.5);border-radius:4em;box-shadow: 10px 10px 0 10px  #800;}</style>");
 //-----------------------------------------SENSOR-------------------------------------------------------------------------------------------
   if(digitalRead(S1) == LOW){
-    client.println("<p><font size='8'>Sensor 1<button style='background-color:green; color:white;width:150;height:100;'><font size='20'>Acionado</button></p>");
+    client.println("<p><font size='5'>Sensor 1<button style='background: #06F; color:white;border-radius:0.4em;width:100px;height:100px;align: left;'></button></p>");
     //client.println("<img src='Circulo_verde.png' height='20%' width='20%'></>");
       
     }
   else{
-    client.println("<p><font size='8'>Sensor 1<button style='background-color:red; color:white;width:150;height:100;'><font size='20'>Nao acionado</button></p>");
+    client.println("<p><font size='5'>Sensor 1<button style='background: #C00; color:white;border-radius:0.4em;width:100px;height:100px;align: left;'></button></p>");
   }
   
 //----------------------------------------BOTÕES--------------------------------------------------------------------------------------------     
   if(!Status1)
-  client.println("<p><font size='8'>Rele 1 <a href =\"rele1_off\"><button style='background-color:green;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 1 <a href =\"rele1_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Rele 1 <a href =\"rele1_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
+  client.println("<p><font size='5'>Rele 1 <a href =\"rele1_on\"><button class= 'botao_off' >OFF</button></a></p>");
 
   if(!Status2)
-  client.println("<p><font size='8'>Rele 2 <a href =\"rele2_off\"><button style='background-color:green; color:white;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 2 <a href =\"rele2_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Rele 2 <a href =\"rele2_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
+  client.println("<p><font size='5'>Rele 2 <a href =\"rele2_on\"><button class= 'botao_off' >OFF</button></a></p>");
 
   if(!Status3)
-  client.println("<p><font size='8'>Luz Desktop <a href =\"rele3_off\"><button style='background-color:green; color:white;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 3 <a href =\"rele3_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Luz Desktop <a href =\"rele3_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
+  client.println("<p><font size='5'>Rele 3 <a href =\"rele3_on\"><button class= 'botao_off' >OFF</button></a></p>");
 
   if(!Status4)
-  client.println("<p><font size='8'>Rele 4 <a href =\"rele4_off\"><button style='background-color:green; color:white;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 4 <a href =\"rele4_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Rele 4 <a href =\"rele4_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
-
+  client.println("<p><font size='5'>Rele 4 <a href =\"rele4_on\"><button class= 'botao_off' >OFF</button></a></p>");
+  
   if(!Status5)
-  client.println("<p><font size='8'>Rele 5 <a href =\"rele5_off\"><button style='background-color:green; color:white;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 5 <a href =\"rele5_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Rele 5 <a href =\"rele5_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
-
+  client.println("<p><font size='5'>Rele 5 <a href =\"rele5_on\"><button class= 'botao_off' >OFF</button></a></p>");
+  
   if(!Status6)
-  client.println("<p><font size='8'>Rele 6 <a href =\"rele6_off\"><button style='background-color:green; color:white;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 6 <a href =\"rele6_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Rele 6 <a href =\"rele6_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
-
+  client.println("<p><font size='5'>Rele 6 <a href =\"rele6_on\"><button class= 'botao_off' >OFF</button></a></p>");
+  
   if(!Status7)
-  client.println("<p><font size='8'>Rele 7 <a href =\"rele7_off\"><button style='background-color:green; color:white;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 7 <a href =\"rele7_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Rele 7 <a href =\"rele7_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
-
+  client.println("<p><font size='5'>Rele 7 <a href =\"rele7_on\"><button class= 'botao_off' >OFF</button></a></p>");
+  
   if(!Status8)
-  client.println("<p><font size='8'>Rele 8 <a href =\"rele8_off\"><button style='background-color:green; color:white;'><font size='20'>ON</button></a></p>");
+  client.println("<p><font size='5'>Rele 8 <a href =\"rele8_off\"><button class= 'botao_on' >ON</button></a></p>");
   else
-  client.println("<p><font size='8'>Rele 8 <a href =\"rele8_on\"><button style='background-color:red; color:white;'><font size='20'>OFF</button></a></p>");
+  client.println("<p><font size='5'>Rele 8 <a href =\"rele8_on\"><button class= 'botao_off' >OFF</button></a></p>");
   
   client.println("</html>");
   
